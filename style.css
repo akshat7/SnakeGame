@@ -1,0 +1,14 @@
+#game-frame{
+    border: thick solid black;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+.board-unit{
+    background-color: brown;
+}
+
+.snake{
+    background-color: green;
+}
