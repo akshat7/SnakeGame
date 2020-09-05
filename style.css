@@ -2,7 +2,7 @@
     border: thick solid black;
     display: flex;
     flex-wrap: wrap;
-    margin-top: 50px;
+    margin: 50px auto;
 }
 
 .board-unit{
@@ -11,4 +11,16 @@
 
 .snake{
     background-color: green;
+}
+
+.food{
+    background-color: blue;
+}
+
+.snakeDead{
+    background-color: yellow;
+}
+
+#restart-game{
+    display: none;
 }
