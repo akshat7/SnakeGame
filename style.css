@@ -1,48 +1,47 @@
-body{
-    background-color: blueviolet;
-    font-family: 'Love Ya Like A Sister', cursive;
+body {
+  background-color: blueviolet;
+  font-family: "Love Ya Like A Sister", cursive;
 }
-h1{
-    color: white;
-    margin: 50px auto;
-    text-align: center;
-}
-
-button{
-    padding: 20px;
-    margin: 5% auto;
-    background-color: yellow;
-    border: none;
-
+h1 {
+  color: white;
+  margin: 50px auto;
+  text-align: center;
 }
 
-#game-frame{
-    border: thick solid black;
-    display: flex;
-    flex-wrap: wrap;
-    margin: 50px auto;
+button {
+  padding: 20px;
+  margin: 5% auto;
+  background-color: yellow;
+  border: none;
 }
 
-.board-unit{
-    background-color: black;
+#game-frame {
+  border: thick solid black;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 50px auto;
 }
 
-.snake{
-    background-color: green;
+.board-unit {
+  background-color: black;
 }
 
-.food{
-    background-color: blue;
+.snake {
+  background-color: green;
 }
 
-.snakeDead{
-    background-color: yellow;
+.food {
+  background-color: blue;
 }
 
-#restart-game{
-    display: none;
+.snakeDead {
+  background-color: yellow;
 }
 
-#start-game{
-    display: block;
+#restart-game {
+  display: none;
+}
+
+#start-game {
+  display: block;
 }
