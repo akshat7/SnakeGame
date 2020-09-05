@@ -18,6 +18,8 @@ let snakeHead = snakeLength;
 let snakeTail = 0;
 let foodLocation = 0;
 let timerID;
+let playerScore = 0;
+let scoreTag
 
 let createBoard = () => {
     
@@ -106,12 +108,17 @@ let playGame = () => {
     else{
         clearInterval(timerID);
         result = document.createElement("h1");
-        result.textContent = "GameOver!";
-        document.getElementById("restart-game").style.display = "block";
+        result.textContent = "Game Over!";
+
         document.body.appendChild(result);
         document.getElementById(`board-unit-${snakeHead}`).classList.add("snakeDead")
+        
+        document.body.appendChild(restartButton);
+        document.getElementById("restart-game").style.display = "block";
     }
     if(snakeAteFood()){
+        playerScore++;
+        scoreTag.textContent = `Score: ${playerScore}`
         snakeLength += 1;
         snake.unshift(snakeTail)
         document.getElementById(`board-unit-${boardUnitList[snake[0]-1]}`).classList.add("snake")
@@ -132,6 +139,10 @@ startButton.addEventListener("click", function(){
     createSnake()
     spawnFood()
 
+    scoreTag = document.createElement("h1")
+    scoreTag.textContent = `Score: ${playerScore}`
+    document.body.appendChild(scoreTag)
+
     document.addEventListener("keydown", function(event){
         if(event.keyCode === 37){
             direction = moveLeft;
@@ -151,7 +162,6 @@ startButton.addEventListener("click", function(){
 })
 
 let restartButton = document.createElement("button")
-document.body.appendChild(restartButton);
 restartButton.textContent = "Restart Game!"
 restartButton.id = "restart-game"
 restartButton.addEventListener("click", function(){
