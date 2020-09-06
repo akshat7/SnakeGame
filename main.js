@@ -1,19 +1,19 @@
 //variables
-let gridSize = 200;
+let gridSize = 400;
 let gameFrame = document.createElement("div");
 let boardUnitSize = 10;
 let unitMeasure = gridSize / boardUnitSize;
 let boardUnitList = [];
 let snake = [];
 let speed = 0.9;
-let timer = 500;
+let timer = 200;
 let moveRight = 1;
 let moveLeft = -1;
 let moveDown = unitMeasure;
 let moveUp = -unitMeasure;
 let previousDirection = moveRight;
 let direction = moveRight;
-let snakeLength = 4;
+let snakeLength = 6;
 let snakeHead = snakeLength;
 let snakeTail = 0;
 let foodLocation = 0;
